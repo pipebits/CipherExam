@@ -1,0 +1,9 @@
+{
+  "name": "cipher-exam",
+  "version": "0.0.0",
+  "private": "true",
+  "scripts": {
+    "start-api": "cd ./api && npm start",
+    "start-client": "cd ./client && npm start"
+  }
+}
