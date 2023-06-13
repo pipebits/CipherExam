@@ -70,7 +70,8 @@ UserSchema.toJSONFor = function () {
     return {
         email: this.email,
         firstName: this.firstName,
-        lastName: this.lastName
+        lastName: this.lastName,
+        id: this._id
     }
 }
 
@@ -87,7 +88,8 @@ UserSchema.toAdminJSONFor = function () {
         lockedUntil: this.lockedUntil,
         passwordChangedAt: this.passwordChangedAt,
         createdAt: this.createdAt,
-        updatedAt: this.updatedAt
+        updatedAt: this.updatedAt,
+        id: this._id
     }
 }
 
