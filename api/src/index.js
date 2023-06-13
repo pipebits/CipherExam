@@ -15,6 +15,22 @@ app.use(function (req, res, next) {
     next();
 });
 
+const session = require('express-session')
+app.use(
+    session({
+        name: 'cipher.exam',
+        secret: process.env.SESSION_SECRET,
+        resave: true,
+        rolling: false,
+        saveUninitialized: false,
+        cookie: {
+            httpOnly: false,
+            secure: false,
+            path: '/'
+        }
+    })
+)
+
 app.listen(process.env.PORT, _ => {
     console.log(`App listening on port ${process.env.PORT}`)
 })
