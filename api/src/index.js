@@ -31,6 +31,8 @@ app.use(
     })
 )
 
+const sessionInitializer = require('./middlewares/sessionInitializer')
+app.use(sessionInitializer)
 
 const errorHandler = require('./middlewares/errorHandler')
 app.use(errorHandler)
