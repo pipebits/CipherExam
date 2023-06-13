@@ -11,7 +11,7 @@ const UserSchema = new mongoose.Schema(
         state: { type: Number, default: 1 },
         invalidLoginAttemps: { type: Number },
         roles: [
-            { type: String, required: true }
+            { type: mongoose.Schema.Types.ObjectId, ref: 'Roles' }
         ],
         permissions: [
             { type: String, required: true }
