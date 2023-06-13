@@ -16,7 +16,7 @@ function errorHandler(err, req, res, next) {
     error.save();
 
     if (process.env.NODE_ENV == "development") {
-        res.status(200).json({
+        res.status(400).json({
             result: null,
             success: false,
             errors: [
@@ -43,7 +43,7 @@ function errorHandler(err, req, res, next) {
             ],
         });
     } else {
-        res.status(200).json({
+        res.status(400).json({
             result: null,
             success: false,
             errors: [
