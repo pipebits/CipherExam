@@ -34,6 +34,8 @@ app.use(
 const sessionInitializer = require('./middlewares/sessionInitializer')
 app.use(sessionInitializer)
 
+app.use('/users', require('./routes/Users'))
+
 const errorHandler = require('./middlewares/errorHandler')
 app.use(errorHandler)
 
