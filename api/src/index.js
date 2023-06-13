@@ -31,6 +31,10 @@ app.use(
     })
 )
 
+const errorHandler = require('./middlewares/errorHandler')
+
+app.use(errorHandler)
+
 app.listen(process.env.PORT, _ => {
     console.log(`App listening on port ${process.env.PORT}`)
 })
