@@ -31,8 +31,8 @@ app.use(
     })
 )
 
-const errorHandler = require('./middlewares/errorHandler')
 
+const errorHandler = require('./middlewares/errorHandler')
 app.use(errorHandler)
 
 app.listen(process.env.PORT, _ => {
